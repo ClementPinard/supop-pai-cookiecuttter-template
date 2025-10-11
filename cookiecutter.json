@@ -1,0 +1,6 @@
+{
+    "project_name": "",
+    "hyphen_name": "{{ cookiecutter.project_name | slugify(separator='-') }}",
+    "underscore_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
+    "authors": ""
+}
