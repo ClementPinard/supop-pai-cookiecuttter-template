@@ -14,10 +14,10 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(".."))
-import {{ cookiecutter.underscore_name }}
+import {{ cookiecutter.package_name }}
 
 # -- Project information -----------------------------------------------------
-project = "{{ cookiecutter.underscore_name }}"
+project = "{{ cookiecutter.project_full_name }}"
 author = "{{ cookiecutter.authors }}"
 copyright = "2025, {{ cookiecutter.authors }}"
 
@@ -32,7 +32,7 @@ html_logo = "_static/logo.png"
 html_theme_options = {
     "navbar_align": "left",
     "logo": {
-        "text": "{{ cookiecutter.underscore_name }} documentation",
+        "text": "{{ cookiecutter.package_name }} documentation",
     },
     "external_links": [
         {
@@ -70,14 +70,6 @@ extensions = [
     "sphinxarg.ext",
 ]
 
-favicons = [
-    {"href": "cropped-favicon-192x192.png"},
-    {
-        "rel": "apple-touch-icon",
-        "href": "cropped-favicon-180x180.png",
-    },
-]
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 autodoc_typehints = "signature"
@@ -105,6 +97,4 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
     "pandas": ("https://pandas.pydata.org/docs/", None),
     "numpy": ("https://numpy.org/doc/stable/", None),
-    "pot": ("https://pythonot.github.io/", None),
-    "fiftyone": ("https://docs.voxel51.com/", None),
 }

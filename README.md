@@ -1,4 +1,5 @@
 # supop-pai-cookiecuttter-template
+
 A cookiecutter template that you can use to start your project.
 
 This template is part of a lecture given at [Institut d'Optique](https://www.institutoptique.fr/).

@@ -1,5 +1,5 @@
 [project]
-name = "{{ cookiecutter.hyphen_name}}"
+name = "{{ cookiecutter.repo_name}}"
 version = "0.1.0"
 description = ""
 authors = [
@@ -14,7 +14,7 @@ dependencies = [
 
 
 [project.scripts]
-main = {{ cookiecutter.underscore_name }}.main:run"
+main = {{ cookiecutter.package_name }}.main:run"
 
 [dependency-groups]
 test = [
@@ -45,10 +45,10 @@ default-groups = [
 ]
 
 [tool.hatch.build.targets.sdist]
-include = ["{{ cookiecutter.underscore_name }}"]
+include = ["{{ cookiecutter.package_name }}"]
 
 [tool.hatch.build.targets.wheel]
-include = ["{{ cookiecutter.underscore_name }}"]
+include = ["{{ cookiecutter.package_name }}"]
 
 [build-system]
 requires = ["hatchling"]
@@ -65,7 +65,7 @@ check-yield-types = false
 [tool.pytest.ini_options]
 doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS"]
 addopts = "--import-mode=importlib --doctest-modules"
-testpaths = ["test_{{cookiecutter.underscore_name}}", "{{cookiecutter.underscore_name}}"]
+testpaths = ["test_{{cookiecutter.package_name}}", "{{cookiecutter.package_name}}"]
 
 [tool.coverage.run]
-source = ["{{cookiecutter.underscore_name}}"]
+source = ["{{cookiecutter.package_name}}"]

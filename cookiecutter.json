@@ -1,6 +1,10 @@
 {
-    "project_name": "",
-    "hyphen_name": "{{ cookiecutter.project_name | slugify(separator='-') }}",
-    "underscore_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
-    "authors": ""
+    "project_full_name": "",
+    "repo_name": "{{ cookiecutter.project_full_name | slugify(separator='-') }}",
+    "package_name": "{{ cookiecutter.project_full_name | slugify(separator='_') }}",
+    "authors": "",
+    "_copy_without_render": [
+        "docs/_templates",
+        ".github"
+    ]
 }

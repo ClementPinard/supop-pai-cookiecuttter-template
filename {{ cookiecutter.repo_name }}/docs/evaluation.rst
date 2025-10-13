@@ -1,7 +1,7 @@
 Main
 ====
 
-.. currentmodule:: {{ cookiecutter.underscore_name }}
+.. currentmodule:: {{ cookiecutter.package_name }}
 
 
 Main Module
