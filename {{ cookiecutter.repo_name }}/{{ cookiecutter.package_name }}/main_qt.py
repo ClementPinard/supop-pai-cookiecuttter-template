@@ -5,10 +5,12 @@ The project assumes that your main entrypoint is the function run() of this file
 (see pyproject.toml scripts)
 """
 
-import numpy as np
-from {{ cookiecutter.package_name }}.my_module import typed_function
-from PySide6.QtWidgets import QApplication, QWidget
 import sys
+
+import numpy as np
+from PySide6.QtWidgets import QApplication, QWidget
+
+from {{ cookiecutter.package_name }}.my_module import typed_function
 
 
 def run():

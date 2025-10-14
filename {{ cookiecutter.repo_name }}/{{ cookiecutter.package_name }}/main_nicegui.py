@@ -4,14 +4,15 @@ The project assumes that your "main_ng" entrypoint is the function run() of this
 (see pyproject.toml scripts)
 """
 
-from nicegui import ui
 import numpy as np
+from nicegui import ui
+
 from {{ cookiecutter.package_name }}.my_module import typed_function
 
 
 def run(reload: bool = False):
     """This is the main function that gets run"""
-    ui.label(f"Hello world {typed_function(np.zeros(10), "")}")
+    ui.label(f"Hello world {typed_function(np.zeros(10), '')}")
     ui.slider(min=0, max=100)
     ui.run(reload=reload)
 
