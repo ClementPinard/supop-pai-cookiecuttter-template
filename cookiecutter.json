@@ -4,8 +4,16 @@
     "package_name": "{{ cookiecutter.project_full_name | slugify(separator='_') }}",
     "authors": "",
     "github_url": "https://github.com/ClementPinard/supop-pai-cookiecuttter-template",
+    "_output_folder": "cookiecutter_output",
     "_copy_without_render": [
         "docs/_templates",
         ".github"
-    ]
+    ],
+    "__prompts__":{
+        "project_full_name": "Your team's project name, how it will apears as title of the README",
+        "repo_name": "The name of your repo. Usually, the project full name, with hyphen separated lowercase words.",
+        "package_name": "The name of the package that will be imported. Careful, it cannot be hyphen separated words, only underscore separated.",
+        "authors": "The name of the projects authors. Separate each name with a ','",
+        "github_url": "The url to the github page of your project."
+    }
 }
