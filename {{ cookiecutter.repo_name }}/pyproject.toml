@@ -9,12 +9,14 @@ requires-python = ">=3.10, <3.14"
 readme = "README.md"
 dependencies = [
     "pandas[parquet]>=2,<3",
-    "nicegui[native]"
+    "nicegui[native]>=2,<3",
+    "pyside6"
 ]
 
 
 [project.scripts]
-main = {{ cookiecutter.package_name }}.main:run"
+main_ng = "{{ cookiecutter.package_name }}.main_nicegui:run"
+main_qt = "{{ cookiecutter.package_name }}.main_qt:run"
 
 [dependency-groups]
 test = [

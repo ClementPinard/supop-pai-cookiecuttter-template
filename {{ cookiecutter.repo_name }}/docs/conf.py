@@ -27,12 +27,12 @@ copyright = "2025, {{ cookiecutter.authors }}"
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/logo.png"
+html_logo = "_static/logo_supop.jpg"
 
 html_theme_options = {
     "navbar_align": "left",
     "logo": {
-        "text": "{{ cookiecutter.package_name }} documentation",
+        "text": "{{ cookiecutter.project_full_name }} documentation",
     },
     "external_links": [
         {
@@ -43,7 +43,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/XXII-AI/Lours",
+            "url": "{{ cookiecutter.github_url }}",
             "icon": "fa-brands fa-github",
             "type": "fontawesome",
         },

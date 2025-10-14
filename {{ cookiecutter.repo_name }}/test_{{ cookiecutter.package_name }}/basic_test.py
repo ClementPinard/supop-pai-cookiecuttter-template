@@ -1,5 +1,5 @@
 import numpy as np
-import {{ cookiecutter.package_name }}
+from {{ cookiecutter.package_name }}.my_module import typed_function
 
 def test_typed_function():
-    assert {{ cookiecutter.package_name }}.typed_function(np.zeros(10), "") == False
+    assert typed_function(np.zeros(10), "") == False

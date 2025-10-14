@@ -1,12 +1,12 @@
-Welcome to Lours documentation!
-=================================
+Welcome to {{cookiecutter.project_full_name}} documentation!
+============================================================
 
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   main
+   {{ cookiecutter.package_name }}
    notebooks
    readme
 

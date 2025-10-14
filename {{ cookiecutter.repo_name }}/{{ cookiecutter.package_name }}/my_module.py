@@ -1,15 +1,12 @@
-"""This module serves as a basis for your project. You can either use NiceGUI
-or Pyside to start.
-
-The project assumes that your main entrypoint is the function run() of this file
-(see pyproject.toml scripts)
+"""This module shows you how you can construct a nice documentation with
+sphinx and the right syntaxe for docstrings.
 """
 
 import numpy as np
 
 
-def type_function(a: np.ndarray, b: str = "") -> bool:
-    """This is a typed function.
+def typed_function(a: np.ndarray, b: str = "") -> bool:
+    r"""This is a typed function.
     This docstring is made so that it renders nicely on sphinx. It features notes,
     arguments, cross references (here, to numpy documentation), maths and examples.
 
@@ -28,9 +25,10 @@ def type_function(a: np.ndarray, b: str = "") -> bool:
         b: second parameter. Defaults to empty string.
 
     Examples
-        >>> type_function(np.zeros(10))
+        >>> typed_function(np.zeros(10))
         False
-        >>> type_function(
+
+        >>> typed_function(
         ...     np.zeros(10),
         ...     "hello"
         ... )
@@ -43,5 +41,9 @@ def type_function(a: np.ndarray, b: str = "") -> bool:
     return False
 
 
-def run():
-    """This is the main function that gets run"""
+def other_function() -> None:
+    """This is another function
+
+    This function is here to show you how sphinx displays functions of a same module
+    in a webpage.
+    """
