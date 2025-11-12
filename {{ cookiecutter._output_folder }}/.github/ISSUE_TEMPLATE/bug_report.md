@@ -13,12 +13,12 @@ A clear and concise description of what the bug is.
 **To Reproduce**
 Steps to reproduce the behavior:
 
-If possible, try to make the bug reproducible using the [dummy_dataset](https://lours.readthedocs.io/latest/generated/lours.utils.doc_utils.html#lours.utils.doc_utils.dummy_dataset) tool
+If possible, try to make the bug reproduction as small as possible
 
 ```python
-from lours.utils.doc_utils import dummy_dataset
+from {{ cookiecutter.package_name }} import function
 
-my_dataset = dummy_dataset()
+function()
 ```
 
 **Expected behavior**

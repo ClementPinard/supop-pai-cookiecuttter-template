@@ -7,7 +7,7 @@
     "_output_folder": "cookiecutter_output",
     "_copy_without_render": [
         "docs/_templates",
-        ".github"
+        ".github/workflows/CI.yaml"
     ],
     "__prompts__":{
         "project_full_name": "Your team's project name, how it will apears as title of the README",

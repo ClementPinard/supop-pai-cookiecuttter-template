@@ -23,8 +23,9 @@ Example
 > The ideal solution would look like this
 >
 > ```python
+> from {{ cookiecutter.package_name }} import Dataset
+> my_dataset = Dataset()
 > my_dataset = my_dataset.resize(size=(220,220))
-> my_dataset.to_caipy(output_folder)
 > ```
 
 **Additional context**
