@@ -24,7 +24,7 @@ The following indications assume you have `uv` and `git` installed and usable wi
 See [Install instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
 1. Create your own repo on github, keep it empty. Optionally, add a License (this template does not have any).
-2. Clone it, and note the github http address.
+2. Clone it, and note the github web address to your repo (not the git address).
 3. Call the following command
 
     ```bash
@@ -35,19 +35,44 @@ See [Install instructions](https://docs.astral.sh/uv/getting-started/installatio
 
     - The project name
     - the repo name: make it so it matches the repo name on github
-    - the github http adress of your project
+    - the github web adress of your project
 
 4. copy paste everything in the newly created "cookiecutter_output" folder created in your
-previously cloned repo
+previously cloned repo. Note the `/.` after the `cookiecutter_output` folder,
+it is essential.
 
     ```bash
-    cp -r cookiecutter_output/* <my cloned repo>
+    cp -r cookiecutter_output/. <my cloned repo>
     ```
 
 5. You can now commit and push to have a first version of your project
 
-```bash
-git add .
-git commit -m "First commit applying template"
-git push
-```
+    ```bash
+    git add .
+    git commit -m "First commit applying template"
+    git push
+    ```
+
+6. Notice the github actions on your repository.
+
+    Several tests should have been started:
+
+    - Pre-commit linting
+    - Pyright type-checking
+    - Tests (with pytest and coverage)
+    - Documentation building
+
+    They will run each time you push a commit. Use them to make sure your project stay
+    at the same quality level throughout development.
+
+    To customize them, you can modify the `.github/workflows/CI.yaml` file in your repo.
+
+7. Start coding !
+
+    - Use the already built-in examples to either construct a Qt app or a NiceGUI app
+    - Don't forget to implement tests as you add features.
+    - Don't forget to have an up to date README on how to install and use your app.
+    - Even better if you are able to construct a good documentation website.
+      The pre-built documentation website will look at the docstrings in your code and
+      create an index with them. The function in `typed_function` in the `my_module.py`
+      file has been extensively typed and documented to show you how it looks like.

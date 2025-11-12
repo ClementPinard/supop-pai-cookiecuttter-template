@@ -43,7 +43,7 @@ uvx pre-commit install
 
 ```bash
 uv sync --group test
-uv run pytest
+uv run coverage run -m pytest -v
 ```
 
 ### How to run type checking
